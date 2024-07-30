@@ -67,13 +67,6 @@ section h2 {
   text-align: center;
 }
 
-section .content,
-section .content textarea {
-  width: auto;
-  max-width: 960px;
-  min-width: 500px;
-}
-
 textarea {
   overflow: hidden;
   resize: none;
@@ -197,6 +190,15 @@ footer {
   width: 100%;
 }
 
+@media (min-width: 600px) {
+  section .content,
+  section .content textarea {
+    width: auto;
+    max-width: 960px;
+    min-width: 500px;
+  }
+}
+
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -214,7 +216,8 @@ footer {
     align-items: center;
   }
   .service {
-    width: 100%;
-    max-width: 300px;
+    width: auto;
+    max-width: auto;
+    min-width: auto;
   }
 }
