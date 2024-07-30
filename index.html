@@ -12,12 +12,19 @@
     <h1>Добро пожаловать</h1>
     <p>Профессиональные услуги по созданию контента</p>
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="#services">Услуги</a></li>
       <li><a href="#order">Заказать</a></li>
       <li><a href="#contact">Контакты</a></li>
+      <li>
+        <select id="languageSwitcher">
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+          <!-- Add more languages here -->
+        </select>
+      </li>
     </ul>
   </nav>
 
@@ -72,7 +79,7 @@
     <form id="orderForm" class="content">
       <label for="name">Имя:</label>
       <input type="text" id="name" name="name" required>
-      
+
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
 
