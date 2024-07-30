@@ -70,7 +70,7 @@ section h2 {
 section .content,
 section .content textarea {
   width: auto;
-  max-width: 900px;
+  max-width: 960px;
   min-width: 500px;
 }
 
@@ -87,8 +87,8 @@ textarea {
 
 .service {
   background: #fff;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   padding: 20px;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -99,12 +99,52 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-content {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service:hover .service-content {
+  transform: rotate(0deg);
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service i {
   font-size: 2em;
   color: #007BFF;
-  margin-bottom: 10px;
+}
+
+.service .description,
+.service .more-info {
+ /* opacity: 0;
+  display: none;
+  transition: opacity 0.3s;*/
+/*  position: absolute;*/
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.more-info {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  bottom: 20px;
 }
 
 form {
